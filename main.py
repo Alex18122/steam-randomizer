@@ -1,3 +1,4 @@
+import random
 import requests
 from dotenv import load_dotenv
 import os
@@ -15,5 +16,7 @@ data = response.json()
 
 games = data["response"]["games"]
 
-for game in sorted(games, key=lambda g: g["name"]):
-    print(f"{game["name"]} appId: {game["appid"]} playtime : {game["playtime_forever"]}")
+#for game in sorted(games, key=lambda g: g["name"]):
+#    print(f"{game["name"]} appId: {game["appid"]} playtime : {game["playtime_forever"]}")
+
+print(random.choice(games)["name"])
